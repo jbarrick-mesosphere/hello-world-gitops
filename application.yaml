@@ -13,7 +13,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - gpaul/hello-world:sha256:940f97ffcd3fd281eec6428f1c16e584ca9d41473b015404a54b96d054e899af
+      - image: gpaul/hello-world:sha256:940f97ffcd3fd281eec6428f1c16e584ca9d41473b015404a54b96d054e899af
         name: hello-world
         ports:
         - containerPort: 8080
