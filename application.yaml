@@ -13,7 +13,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: gcr.io/google-samples/hello-app:2.0
+      - image: gpaul/hello-world@sha256:cf0ea47fb761f7223c027a686554b567b2cca271ec5d0e2a8cf4b4b9ac70b01d
         name: hello-world
         ports:
         - containerPort: 8080
