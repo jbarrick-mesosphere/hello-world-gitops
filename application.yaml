@@ -66,10 +66,14 @@ spec:
     name: hello-world
   minReplicas: 2
   maxReplicas: 10
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      # scale up if usage is above
-      # 99% of the requested CPU (100m)
-      targetAverageUtilization: 50
+  metrics:  - type: Object
+    object:
+      metric:
+        name: requests-per-second
+      describedObject:
+        apiVersion: networking.k8s.io/v1beta1
+        kind: Ingress
+        name: hello-world
+      target:
+        kind: Value
+        value: 5
