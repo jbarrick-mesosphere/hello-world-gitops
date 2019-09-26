@@ -54,4 +54,3 @@ spec:
           serviceName: hello-world
           servicePort: 80
         path: /hello-world
-
