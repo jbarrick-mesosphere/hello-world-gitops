@@ -54,24 +54,4 @@ spec:
           serviceName: hello-world
           servicePort: 80
         path: /hello-world
----
-apiVersion: autoscaling/v2beta1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: hello-world
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: hello-world
-  minReplicas: 2
-  maxReplicas: 10
-  metrics:
-  - type: Object
-    object:
-      target:
-        apiVersion: extensions/v1beta1
-        kind: Ingress
-        name: hello-world
-      targetValue: 200
-      metricName: requests-per-second
+        
