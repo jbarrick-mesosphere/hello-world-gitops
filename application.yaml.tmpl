@@ -13,7 +13,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: gpaul/hello-world:{{.ImageDigest}}
+      - image: gpaul/hello-world@{{.ImageDigest}}
         name: hello-world
         ports:
         - containerPort: 8080
